@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.android.support:support-v13:27.1.1'
+    compile 'com.qozix:tileview:2.2.3'
+}
+
+///////////////////////////////////
+////       BINTRAY UPLOAD      ////
+///////////////////////////////////
+
+//////////////////////////////////////////
+////                                  ////
+////         Pour uploader :          ////
+////                                  ////
+////     ./gradlew bintrayUpload      ////
+////                                  ////
+//////////////////////////////////////////
+
+ext {
+    bintrayRepo = bintrayrepo
+    bintrayName = bintrayname
+
+    publishedGroupId = publishedgroupid
+    libraryName = libraryname
+    artifact = 'lib_commonlib'
+
+    libraryDescription = librarydescription
+
+    siteUrl = siteurl
+    gitUrl = giturl
+
+    libraryVersion = projectversion
+
+    developerId = developerid
+    developerName = developername
+    developerEmail = developeremail
+
+    licenseName = licensename
+    licenseUrl = licenseurl
+    allLicenses = alllicenses
+}
+
+apply from: '../maven.gradle'

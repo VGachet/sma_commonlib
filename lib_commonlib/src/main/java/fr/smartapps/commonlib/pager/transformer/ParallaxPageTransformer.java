@@ -1,0 +1,24 @@
+package fr.smartapps.commonlib.pager.transformer;
+
+import android.view.View;
+
+import fr.smartapps.commonlib.pager.SMAViewPager;
+
+/**
+ * Created by owais.ali on 7/31/2016.
+ */
+public class ParallaxPageTransformer extends BaseTransformer {
+
+    private static final float FACTOR = 1.4f;
+
+    public ParallaxPageTransformer(SMAViewPager viewPager) {
+        super(viewPager);
+    }
+
+    @Override
+    protected void onTransform(View view, float position, int pageWidth, int pageHeight) {
+        if(position >= 0){
+            view.setTranslationX(-pageWidth / FACTOR * position);
+        }
+    }
+}

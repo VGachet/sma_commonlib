@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">commonlib</string>
+    <string name="mapbox_token">pk.eyJ1IjoidmluY2VudGNoYW5uIiwiYSI6ImNpeXU1N292ejAwM2UzMnBjZXMwbm9saXgifQ.sAKyHlHdXhyGJTvc1hXfLQ</string>
+</resources>

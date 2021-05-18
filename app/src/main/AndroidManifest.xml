@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.smartapps.demo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TabActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".PagerTabActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".PagerAnimationActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".PagerBoundariesActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name=".ZoomableImageActivity" />
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".MapviewActivity" />
+        <activity android:name=".video.MainVideoActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".video.CommonMethodsActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".video.CustomInitActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".video.ScaleTypeActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".video.SimpleInitActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".list.MainListActivity" />
+        <activity android:name=".list.AsyncListActivity" />
+        <activity android:name=".list.ExpandListActivity" />
+        <activity android:name=".list.GridActivity" />
+        <activity android:name=".list.ListActivity" />
+        <activity android:name=".list.RandomReloadActivity" />
+        <activity android:name=".list.RefreshListActivity" />
+        <activity android:name=".list.SearchActivity" />
+        <activity android:name=".video.SubtitlesActivity"
+            android:configChanges="orientation|screenSize"/>
+    </application>
+
+</manifest>

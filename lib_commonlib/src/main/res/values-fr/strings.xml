@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_talkback_player_bar">Barre de progression de la vidéo</string>
+    <string name="accessibility_talkback_pause">Interrompre la vidéo</string>
+    <string name="accessibility_talkback_play">Lire la vidéo</string>
+</resources>
