@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion 17
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -22,9 +22,9 @@ android {
 }
 
 dependencies {
-    api 'com.android.support:appcompat-v7:28+'
-    api 'com.android.support:design:28+'
-    api 'com.android.support:support-v13:28+'
+    api 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:design:27.1.1'
+    api 'com.android.support:support-v13:27.1.1'
     api 'com.qozix:tileview:2.2.3'
 }
 
@@ -36,7 +36,7 @@ afterEvaluate {
 
                 groupId = 'com.github.VGachet'
                 artifactId = 'sma_commonlib'
-                version = '1.1.27'
+                version = '1.1.28'
 
                 pom {
                     packaging 'aar'
