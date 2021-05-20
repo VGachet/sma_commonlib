@@ -1,12 +1,15 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -19,46 +22,53 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile 'com.android.support:design:27.1.1'
-    compile 'com.android.support:support-v13:27.1.1'
-    compile 'com.qozix:tileview:2.2.3'
+    api 'com.android.support:appcompat-v7:28+'
+    api 'com.android.support:design:28+'
+    api 'com.android.support:support-v13:28+'
+    api 'com.qozix:tileview:2.2.3'
 }
 
-///////////////////////////////////
-////       BINTRAY UPLOAD      ////
-///////////////////////////////////
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
 
-//////////////////////////////////////////
-////                                  ////
-////         Pour uploader :          ////
-////                                  ////
-////     ./gradlew bintrayUpload      ////
-////                                  ////
-//////////////////////////////////////////
+                groupId = 'com.github.VGachet'
+                artifactId = 'sma_commonlib'
+                version = '1.1.27'
 
-ext {
-    bintrayRepo = bintrayrepo
-    bintrayName = bintrayname
+                pom {
+                    packaging 'aar'
+                    groupId 'com.github.VGachet'
+                    artifactId 'sma_commonlib'
 
-    publishedGroupId = publishedgroupid
-    libraryName = libraryname
-    artifact = 'lib_commonlib'
+                    // Add your description here
+                    name = 'sma_commonlib'
+                    description = 'Smartapps common library'
+                    url = 'https://smartapps.fr/'
 
-    libraryDescription = librarydescription
-
-    siteUrl = siteurl
-    gitUrl = giturl
-
-    libraryVersion = projectversion
-
-    developerId = developerid
-    developerName = developername
-    developerEmail = developeremail
-
-    licenseName = licensename
-    licenseUrl = licenseurl
-    allLicenses = alllicenses
+                    // Set your license
+                    licenses {
+                        license {
+                            name = 'The Apache Software License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'smartapps'
+                            name = 'Smartapps'
+                            email = 'dd@smartapps.fr'
+                        }
+                    }
+                    scm {
+                        connection = 'https://github.com/smartguide.git'
+                        developerConnection = 'https://github.com/smartguide.git'
+                        url = 'https://github.com/smartguide.git'
+                    }
+                }
+            }
+        }
+    }
 }
-
-apply from: '../maven.gradle'
