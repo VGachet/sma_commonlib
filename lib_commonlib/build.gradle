@@ -4,14 +4,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 21
+        targetSdkVersion 34
     }
     buildTypes {
         release {
@@ -21,11 +18,18 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    google()
+}
+
 dependencies {
-    api 'com.android.support:appcompat-v7:27.1.1'
-    api 'com.android.support:design:27.1.1'
-    api 'com.android.support:support-v13:27.1.1'
-    api 'com.qozix:tileview:2.2.3'
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'com.google.android.material:material:1.10.0'
+    api 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'com.github.smartapps-fr:TileView:1.0.0'
 }
 
 afterEvaluate {
@@ -34,13 +38,13 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                groupId = 'com.github.VGachet'
+                groupId = 'com.github.smartapps-fr'
                 artifactId = 'sma_commonlib'
-                version = '1.1.28'
+                version = '1.1.29'
 
                 pom {
                     packaging 'aar'
-                    groupId 'com.github.VGachet'
+                    groupId 'com.github.smartapps-fr'
                     artifactId 'sma_commonlib'
 
                     // Add your description here
@@ -63,9 +67,11 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        connection = 'https://github.com/smartguide.git'
-                        developerConnection = 'https://github.com/smartguide.git'
-                        url = 'https://github.com/smartguide.git'
+                        connection = 'https://github.com/smartapps-fr/sma_commonlib.git'
+                        developerConnection = 'https://github.com/smartapps-fr/sma_commonlib.git'
+                        tag = '1.1.29'
+                        url = 'https://github.com/smartapps-fr/sma_commonlib.git'
+
                     }
                 }
             }

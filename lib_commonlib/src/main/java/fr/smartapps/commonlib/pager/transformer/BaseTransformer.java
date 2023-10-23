@@ -2,7 +2,7 @@ package fr.smartapps.commonlib.pager.transformer;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.View;
 

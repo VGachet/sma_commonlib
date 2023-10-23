@@ -272,7 +272,7 @@ public class SMAMapView extends TileView {
     /*
     Protected methods
      */
-    protected void init() {
+    public void init() {
         if (this.bitmapProviderListener != null) {
             BitmapProviderMapView bitmapProvider = new BitmapProviderMapView(this.bitmapProviderListener, MAP_WIDTH, MAP_HEIGHT, TILE_SIZE);
             setBitmapProvider(bitmapProvider);

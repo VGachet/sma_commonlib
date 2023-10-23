@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/row_container">
 
-    <android.support.percent.PercentRelativeLayout
+    <androidx.percentlayout.widget.PercentRelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
@@ -17,6 +17,6 @@
             app:layout_widthPercent="100%"
             app:layout_aspectRatio="100%"/>
 
-    </android.support.percent.PercentRelativeLayout>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
 </LinearLayout>

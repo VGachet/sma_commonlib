@@ -3,7 +3,7 @@ package fr.smartapps.commonlib.pager;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.app.Fragment;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
